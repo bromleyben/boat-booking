@@ -1,0 +1,13 @@
+{% extends 'boats/base.html' %}
+
+{% block body_content %}
+    {% if boat_list %}
+        <ul>
+        {% for boat in boat_list %}
+            <li><a href="/boats/{{ boat.id }}/">{{ boat.name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p> No boats yet...</p>
+    {% endif %}
+{% endblock %}
