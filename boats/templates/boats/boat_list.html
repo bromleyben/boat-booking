@@ -3,14 +3,16 @@
 {% block body_content %}
     {% if boat_list %}
         <section class="row">
-        {% for boat in boat_list %}
-            <div class="col-md-3">
-                <div class="panel panel-default">
-                    <h2>{{ boat.name }}</h2>
-                    <a class="btn btn-primary" href="#">Details</a>
+            {% for boat in boat_list %}
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h2>{{ boat.name }}</h2>
+                            <a class="btn btn-primary" href="#">Details</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
         </section>
     {% else %}
         <p> No boats yet...</p>
