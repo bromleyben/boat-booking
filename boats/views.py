@@ -12,3 +12,4 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         """Return the last five published questions."""
         return Boat.objects.order_by('name')
+
